@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no" class="notranslate">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:,">
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex, nofollow">
+<title>QCM de positionnement — Anglais · ELEC 1 CL2 · 08/09/2026</title>
+<style>
+  :root { --ink:#2a2a2a; --muted:#6b6357; --hair:#e2ddd3; --parch:#f5f0e8; --gold:#a8854a; --green:#4a6b4a; --red:#9a3b3b; --bg:#faf8f4; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:17px; line-height:1.45; }
+  .wrap { max-width:720px; margin:0 auto; padding:18px 16px 60px; }
+  header { border-bottom:2px solid var(--ink); padding-bottom:12px; margin-bottom:16px; }
+  .eyebrow { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  h1 { font-family:Georgia, "Times New Roman", serif; font-size:26px; margin:6px 0 4px; line-height:1.2; }
+  .sub { color:var(--muted); font-size:14px; margin:0; }
+  .card { background:#fff; border:1px solid var(--hair); border-radius:12px; padding:14px 16px; margin:14px 0; }
+  label.field { display:block; font-size:13px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px; }
+  input[type=text] { width:100%; font-size:18px; padding:12px; border:1px solid #c9c2b6; border-radius:8px; background:#fff; color:var(--ink); }
+  input[type=text]:focus { outline:2px solid var(--gold); border-color:var(--gold); }
+  .consigne { border-left:4px solid var(--ink); background:var(--parch); padding:10px 12px; font-size:15px; border-radius:0 8px 8px 0; }
+  .part { font-family:Georgia, serif; font-size:20px; margin:26px 0 4px; padding-top:10px; border-top:1px solid var(--hair); }
+  .part small { font-family:-apple-system, Helvetica, Arial, sans-serif; font-size:13px; color:var(--muted); font-weight:400; margin-left:8px; }
+  .q { background:#fff; border:1px solid var(--hair); border-radius:12px; padding:12px 14px; margin:10px 0; }
+  .q.missing { border-color:var(--red); box-shadow:0 0 0 2px rgba(154,59,59,.15); }
+  .q .stem { margin:0 0 8px; font-size:17px; }
+  .q .stem b { font-family:Georgia, serif; color:var(--muted); margin-right:8px; }
+  .opt { display:flex; align-items:center; gap:12px; padding:10px 8px; border-radius:8px; cursor:pointer; font-size:17px; border:1px solid transparent; }
+  .opt:active { background:var(--parch); }
+  .opt input { width:22px; height:22px; margin:0; flex:none; accent-color:var(--ink); }
+  .opt.sel { background:var(--parch); border-color:#d8d0c0; }
+  .opt.sel span { font-weight:600; }
+  .actions { position:sticky; bottom:0; background:rgba(250,248,244,.96); padding:12px 0; border-top:1px solid var(--hair); margin-top:20px; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); }
+  .btn { display:inline-block; width:100%; font-size:18px; font-weight:700; padding:14px 18px; border-radius:10px; border:0; cursor:pointer; text-align:center; text-decoration:none; -webkit-appearance:none; appearance:none; }
+  .btn-main { background:var(--ink); color:#fff; }
+  .btn-main:disabled { background:#b9b3a8; }
+  .btn-mail { background:var(--green); color:#fff; margin-top:8px; }
+  .btn-sec { background:#fff; color:var(--ink); border:1px solid #c9c2b6; margin-top:8px; }
+  .progress { font-size:14px; color:var(--muted); text-align:center; margin-bottom:8px; }
+  #result { display:none; }
+  #result.show { display:block; }
+  .score { font-family:Georgia, serif; font-size:40px; line-height:1; margin:6px 0 2px; }
+  .score small { font-size:18px; color:var(--muted); }
+  .level { display:inline-block; background:var(--parch); border:1px solid #d8d0c0; border-radius:999px; padding:4px 12px; font-weight:700; margin:6px 0 10px; }
+  .subs { display:flex; gap:10px; flex-wrap:wrap; font-size:14px; color:var(--muted); }
+  .subs span { background:var(--parch); border-radius:8px; padding:6px 10px; }
+  .subs b { color:var(--ink); }
+  textarea { width:100%; min-height:90px; font-family:Menlo, Courier, monospace; font-size:12px; padding:10px; border:1px solid #c9c2b6; border-radius:8px; color:var(--muted); word-break:break-all; }
+  .note { font-size:14px; color:var(--muted); margin:10px 0 0; }
+  .warn { color:var(--red); font-weight:600; font-size:15px; margin-top:8px; }
+  .done .q input { pointer-events:none; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:30px; }
+</style>
+</head>
+<body class="notranslate" translate="no">
+<div class="wrap">
+  <header>
+    <div class="eyebrow">UIMM Dijon · Anglais · BTS ELEC 1 CL2 · 08 / 09 / 2026</div>
+    <h1>QCM de positionnement — A2 → B2</h1>
+    <p class="sub">Les quatre règles de la fiche de grammaire, trois niveaux — pronoms · present simple · there is / there are · comparaison. 30 questions · note /20 · coefficient 0,10 · environ 30 minutes.</p>
+  </header>
+
+  <div class="card">
+    <label class="field" for="stuName">Nom et prénom</label>
+    <input type="text" id="stuName" placeholder="NOM Prénom" autocomplete="name" autocapitalize="words">
+    <div class="note" id="nameNote"></div>
+  </div>
+
+  <div class="consigne"><b>Consigne.</b> Une seule réponse par question. Les trois parties sont de plus en plus difficiles : c'est normal de ne pas tout savoir. Répondez sans stress, sans téléphone-traducteur ni voisin — ce test sert à connaître votre niveau de départ, pas à vous juger. Une réponse au hasard vaut mieux qu'une question vide.</div>
+
+  <div id="quiz"></div>
+
+  <div class="actions">
+    <div class="progress" id="prog">0 / 30 réponses</div>
+    <button class="btn btn-main" id="submitBtn" data-act="submit">Terminer et voir mon résultat</button>
+    <div class="warn" id="warnMsg"></div>
+  </div>
+
+  <div class="card" id="result">
+    <div class="eyebrow">Résultat</div>
+    <div class="score" id="rNote">— <small>/ 20</small></div>
+    <div id="rName" class="note"></div>
+    <div class="level" id="rLevel">Niveau estimé —</div>
+    <div class="subs" id="rSubs"></div>
+    <p class="note">Ce résultat est une photographie de rentrée. La correction détaillée vous sera envoyée dans votre bilan individuel.</p>
+    <p class="note"><b>Dernière étape : envoyez votre résultat au professeur.</b> Le bouton ouvre votre application Mail avec votre code déjà écrit — il suffit d'appuyer sur Envoyer. Si rien ne s'ouvre, copiez le code ci-dessous et collez-le dans un email à <span id="mailShow"></span>.</p>
+    <a class="btn btn-mail" id="mailBtn" href="#" data-act="mail">Envoyer mon résultat par email</a>
+    <div class="note" style="margin-top:12px"><b>Votre code</b> (à copier si le bouton ne marche pas) :</div>
+    <textarea id="shortCode" readonly style="min-height:56px;font-size:14px;color:#2a2a2a"></textarea>
+    <button class="btn btn-sec" id="copyBtn" data-act="copy">Copier mon code</button>
+    <div class="note" style="margin-top:14px">Code détaillé (facultatif, pour le bilan) :</div>
+    <textarea id="exportCode" readonly></textarea>
+  </div>
+
+  <footer>UIMM Dijon · QCM de positionnement A2 → B2 · ELEC 1 CL2 · 2026.09.08 · Thomas Murphy</footer>
+</div>
+
+<script>
+var Q = [{"n": 1, "prompt": "Every morning, the electrician ______ the circuit breakers.", "opts": [{"L": "A", "t": "checks", "ok": 1}, {"L": "B", "t": "check", "ok": 0}, {"L": "C", "t": "checking", "ok": 0}, {"L": "D", "t": "is check", "ok": 0}], "part": "A2", "topic": "Present simple — 3e personne + s", "theme": "Present simple"}, {"n": 2, "prompt": "The new drill ______ a lot of noise.", "opts": [{"L": "A", "t": "don't make", "ok": 0}, {"L": "B", "t": "doesn't make", "ok": 1}, {"L": "C", "t": "doesn't makes", "ok": 0}, {"L": "D", "t": "not make", "ok": 0}], "part": "A2", "topic": "Present simple négatif — doesn't + base verbale", "theme": "Present simple"}, {"n": 3, "prompt": "______ this drill work with the old battery?", "opts": [{"L": "A", "t": "Do", "ok": 0}, {"L": "B", "t": "Is", "ok": 0}, {"L": "C", "t": "Does", "ok": 1}, {"L": "D", "t": "Have", "ok": 0}], "part": "A2", "topic": "Present simple — question avec Does", "theme": "Present simple"}, {"n": 4, "prompt": "Paul is an electrician. ______ works on building sites.", "opts": [{"L": "A", "t": "She", "ok": 0}, {"L": "B", "t": "It", "ok": 0}, {"L": "C", "t": "His", "ok": 0}, {"L": "D", "t": "He", "ok": 1}], "part": "A2", "topic": "Pronom sujet — He", "theme": "Pronoms"}, {"n": 5, "prompt": "Give the screwdriver to ______, please. I need it.", "opts": [{"L": "A", "t": "me", "ok": 1}, {"L": "B", "t": "I", "ok": 0}, {"L": "C", "t": "my", "ok": 0}, {"L": "D", "t": "mine", "ok": 0}], "part": "A2", "topic": "Pronom complément — me", "theme": "Pronoms"}, {"n": 6, "prompt": "The apprentices forgot ______ gloves in the van.", "opts": [{"L": "A", "t": "theirs", "ok": 0}, {"L": "B", "t": "they", "ok": 0}, {"L": "C", "t": "their", "ok": 1}, {"L": "D", "t": "them", "ok": 0}], "part": "A2", "topic": "Adjectif possessif — their", "theme": "Pronoms"}, {"n": 7, "prompt": "______ two batteries in the case.", "opts": [{"L": "A", "t": "There is", "ok": 0}, {"L": "B", "t": "There are", "ok": 1}, {"L": "C", "t": "It has", "ok": 0}, {"L": "D", "t": "They are", "ok": 0}], "part": "A2", "topic": "There is / There are — pluriel", "theme": "There is / There are"}, {"n": 8, "prompt": "______ a LED under the chuck.", "opts": [{"L": "A", "t": "There are", "ok": 0}, {"L": "B", "t": "It is", "ok": 0}, {"L": "C", "t": "There has", "ok": 0}, {"L": "D", "t": "There is", "ok": 1}], "part": "A2", "topic": "There is / There are — singulier", "theme": "There is / There are"}, {"n": 9, "prompt": "The 12V model is ______ than the 18V model.", "opts": [{"L": "A", "t": "lighter", "ok": 1}, {"L": "B", "t": "more light", "ok": 0}, {"L": "C", "t": "lightest", "ok": 0}, {"L": "D", "t": "more lighter", "ok": 0}], "part": "A2", "topic": "Comparatif court — lighter than", "theme": "Comparaison"}, {"n": 10, "prompt": "The Bosch is ______ than the Makita.", "opts": [{"L": "A", "t": "powerfuler", "ok": 0}, {"L": "B", "t": "more powerfuler", "ok": 0}, {"L": "C", "t": "more powerful", "ok": 1}, {"L": "D", "t": "most powerful", "ok": 0}], "part": "A2", "topic": "Comparatif long — more powerful than", "theme": "Comparaison"}, {"n": 11, "prompt": "This drill ______ two speed settings.", "opts": [{"L": "A", "t": "have", "ok": 0}, {"L": "B", "t": "is", "ok": 0}, {"L": "C", "t": "does", "ok": 0}, {"L": "D", "t": "has", "ok": 1}], "part": "B1", "topic": "Present simple — have → has", "theme": "Present simple"}, {"n": 12, "prompt": "______ the electricians wear insulated gloves?", "opts": [{"L": "A", "t": "Does", "ok": 0}, {"L": "B", "t": "Do", "ok": 1}, {"L": "C", "t": "Are", "ok": 0}, {"L": "D", "t": "Is", "ok": 0}], "part": "B1", "topic": "Present simple — question avec Do (pluriel)", "theme": "Present simple"}, {"n": 13, "prompt": "The electrician ______ the power before he opens the panel.", "opts": [{"L": "A", "t": "always cuts", "ok": 1}, {"L": "B", "t": "cuts always", "ok": 0}, {"L": "C", "t": "always cut", "ok": 0}, {"L": "D", "t": "is always cut", "ok": 0}], "part": "B1", "topic": "Present simple — place de l'adverbe de fréquence", "theme": "Present simple"}, {"n": 14, "prompt": "This is my drill. That one is ______.", "opts": [{"L": "A", "t": "your", "ok": 0}, {"L": "B", "t": "you", "ok": 0}, {"L": "C", "t": "yourself", "ok": 0}, {"L": "D", "t": "yours", "ok": 1}], "part": "B1", "topic": "Pronom possessif — yours", "theme": "Pronoms"}, {"n": 15, "prompt": "The apprentice hurt ______ because he didn't wear gloves.", "opts": [{"L": "A", "t": "him", "ok": 0}, {"L": "B", "t": "himself", "ok": 1}, {"L": "C", "t": "his", "ok": 0}, {"L": "D", "t": "he", "ok": 0}], "part": "B1", "topic": "Pronom réfléchi — himself", "theme": "Pronoms"}, {"n": 16, "prompt": "______ any power in this circuit. You can touch it.", "opts": [{"L": "A", "t": "There aren't", "ok": 0}, {"L": "B", "t": "It isn't", "ok": 0}, {"L": "C", "t": "There isn't", "ok": 1}, {"L": "D", "t": "They aren't", "ok": 0}], "part": "B1", "topic": "There is / There are — négation There isn't", "theme": "There is / There are"}, {"n": 17, "prompt": "______ any screws left in the box?", "opts": [{"L": "A", "t": "Are there", "ok": 1}, {"L": "B", "t": "Is there", "ok": 0}, {"L": "C", "t": "There are", "ok": 0}, {"L": "D", "t": "Have there", "ok": 0}], "part": "B1", "topic": "There is / There are — question Are there any ?", "theme": "There is / There are"}, {"n": 18, "prompt": "How many breakers ______ in this panel?", "opts": [{"L": "A", "t": "there are", "ok": 0}, {"L": "B", "t": "is there", "ok": 0}, {"L": "C", "t": "there is", "ok": 0}, {"L": "D", "t": "are there", "ok": 1}], "part": "B1", "topic": "There is / There are — How many … are there ?", "theme": "There is / There are"}, {"n": 19, "prompt": "A brushless motor is ______ than a brushed motor.", "opts": [{"L": "A", "t": "gooder", "ok": 0}, {"L": "B", "t": "more good", "ok": 0}, {"L": "C", "t": "better", "ok": 1}, {"L": "D", "t": "best", "ok": 0}], "part": "B1", "topic": "Comparatif irrégulier — better than", "theme": "Comparaison"}, {"n": 20, "prompt": "This is ______ way to work on a live circuit.", "opts": [{"L": "A", "t": "the safer", "ok": 0}, {"L": "B", "t": "the safest", "ok": 1}, {"L": "C", "t": "the most safe", "ok": 0}, {"L": "D", "t": "safest", "ok": 0}], "part": "B1", "topic": "Superlatif court — the safest", "theme": "Comparaison"}, {"n": 21, "prompt": "How often ______ the drill bits?", "opts": [{"L": "A", "t": "do you change", "ok": 1}, {"L": "B", "t": "you change", "ok": 0}, {"L": "C", "t": "change you", "ok": 0}, {"L": "D", "t": "are you change", "ok": 0}], "part": "B2", "topic": "Present simple — question How often do you ?", "theme": "Present simple"}, {"n": 22, "prompt": "Why ______ the motor start?", "opts": [{"L": "A", "t": "don't", "ok": 0}, {"L": "B", "t": "isn't", "ok": 0}, {"L": "C", "t": "not", "ok": 0}, {"L": "D", "t": "doesn't", "ok": 1}], "part": "B2", "topic": "Present simple — question négative Why doesn't ?", "theme": "Present simple"}, {"n": 23, "prompt": "She ______ the panel without cutting the power.", "opts": [{"L": "A", "t": "never doesn't open", "ok": 0}, {"L": "B", "t": "never opens", "ok": 1}, {"L": "C", "t": "doesn't never open", "ok": 0}, {"L": "D", "t": "opens never", "ok": 0}], "part": "B2", "topic": "Present simple — never + verbe (sans doesn't)", "theme": "Present simple"}, {"n": 24, "prompt": "The drill is heavy, but ______ battery lasts all day.", "opts": [{"L": "A", "t": "it's", "ok": 0}, {"L": "B", "t": "its'", "ok": 0}, {"L": "C", "t": "its", "ok": 1}, {"L": "D", "t": "his", "ok": 0}], "part": "B2", "topic": "Adjectif possessif its (≠ it's)", "theme": "Pronoms"}, {"n": 25, "prompt": "The two electricians help ______ on the site.", "opts": [{"L": "A", "t": "each other", "ok": 1}, {"L": "B", "t": "themselves", "ok": 0}, {"L": "C", "t": "them", "ok": 0}, {"L": "D", "t": "theirselves", "ok": 0}], "part": "B2", "topic": "Pronom réciproque — each other", "theme": "Pronoms"}, {"n": 26, "prompt": "______ a lot of dust in the basement, so wear a mask.", "opts": [{"L": "A", "t": "There are", "ok": 0}, {"L": "B", "t": "There is", "ok": 1}, {"L": "C", "t": "They are", "ok": 0}, {"L": "D", "t": "It has", "ok": 0}], "part": "B2", "topic": "There is / There are — indénombrable (a lot of dust)", "theme": "There is / There are"}, {"n": 27, "prompt": "______ nothing wrong with the wiring; the problem is the breaker.", "opts": [{"L": "A", "t": "It's", "ok": 0}, {"L": "B", "t": "It has", "ok": 0}, {"L": "C", "t": "There has", "ok": 0}, {"L": "D", "t": "There's", "ok": 1}], "part": "B2", "topic": "There is / There are — There's nothing (≠ It's)", "theme": "There is / There are"}, {"n": 28, "prompt": "The new cable is ______ the old one.", "opts": [{"L": "A", "t": "as thick than", "ok": 0}, {"L": "B", "t": "so thick as", "ok": 0}, {"L": "C", "t": "as thick as", "ok": 1}, {"L": "D", "t": "thicker as", "ok": 0}], "part": "B2", "topic": "Comparaison d'égalité — as … as", "theme": "Comparaison"}, {"n": 29, "prompt": "Copper is ______ silver, but it is much cheaper.", "opts": [{"L": "A", "t": "less conductive than", "ok": 1}, {"L": "B", "t": "less conductiver than", "ok": 0}, {"L": "C", "t": "lesser conductive than", "ok": 0}, {"L": "D", "t": "less conductive as", "ok": 0}], "part": "B2", "topic": "Comparaison d'infériorité — less … than", "theme": "Comparaison"}, {"n": 30, "prompt": "It is ______ tool in the van: 600 euros.", "opts": [{"L": "A", "t": "the expensivest", "ok": 0}, {"L": "B", "t": "the most expensive", "ok": 1}, {"L": "C", "t": "the more expensive", "ok": 0}, {"L": "D", "t": "most expensive", "ok": 0}], "part": "B2", "topic": "Superlatif long — the most expensive", "theme": "Comparaison"}];
+var TEST_NAME = "ELEC1CL2 QCM Positionnement A2-B2 (2026.09.08)", CLASS_NAME = "ELEC 1 CL2", TEACHER = "Thomas.sean.murphy@gmail.com";
+var FIXED_NAME = "", SHORT_PREFIX = "QCM1-ELEC1CL2-20260908";   // nom inscrit à la génération (fichier par élève)
+var STORE = "qcm_elec1cl2_20260908" + (FIXED_NAME ? "_" + FIXED_NAME.replace(/[^A-Za-z0-9]+/g, "_") : "");
+var LAST = null;
+
+function shuffle(a){ for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function load(){ try { return JSON.parse(localStorage.getItem(STORE) || "{}"); } catch(e) { return {}; } }
+function save(st){ try { localStorage.setItem(STORE, JSON.stringify(st)); } catch(e) {} }
+
+function build(){
+  var st = load(), h = "", part = "", n = 0;
+  for (var i = 0; i < Q.length; i++) {
+    var q = Q[i];
+    if (q.part !== part) { part = q.part; var c = 0; for (var k = 0; k < Q.length; k++) if (Q[k].part === part) c++;
+      h += '<div class="part">Partie ' + (part === "A2" ? "A" : part === "B1" ? "B" : "C") + ' — Niveau ' + part + '<small>' + c + ' questions</small></div>'; }
+    var opts = q.opts.slice(); shuffle(opts);
+    h += '<div class="q notranslate" translate="no" id="q' + q.n + '"><p class="stem"><b>' + (q.n < 10 ? "0" + q.n : q.n) + '</b>' + esc(q.prompt).replace("______", "<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>") + '</p>';
+    for (var j = 0; j < opts.length; j++) {
+      var o = opts[j], id = "q" + q.n + "_" + o.L, checked = (st["q" + q.n] === o.L) ? " checked" : "";
+      h += '<label class="opt' + (checked ? " sel" : "") + '" for="' + id + '"><input type="radio" name="q' + q.n + '" id="' + id + '" value="' + o.L + '"' + checked + '><span>' + esc(o.t) + '</span></label>';
+    }
+    h += '</div>';
+  }
+  document.getElementById("quiz").innerHTML = h;
+  if (st.__name) document.getElementById("stuName").value = st.__name;
+  document.getElementById("mailShow").textContent = TEACHER;
+  if (FIXED_NAME) {
+    var inp = document.getElementById("stuName"); inp.value = FIXED_NAME; inp.readOnly = true; inp.style.background = "#f5f0e8";
+    document.getElementById("nameNote").textContent = "Votre nom est déjà inscrit.";
+  }
+  progress();
+}
+
+function answered(){ var n = 0; for (var i = 1; i <= Q.length; i++) if (document.querySelector('input[name="q' + i + '"]:checked')) n++; return n; }
+function progress(){ document.getElementById("prog").textContent = answered() + " / " + Q.length + " réponses"; }
+
+document.addEventListener("change", function(e){
+  var t = e.target; if (!t || t.type !== "radio") return;
+  var box = t.closest(".q"); if (box) { box.classList.remove("missing"); var ls = box.querySelectorAll(".opt"); for (var i = 0; i < ls.length; i++) ls[i].classList.remove("sel"); t.closest(".opt").classList.add("sel"); }
+  var st = load(); st[t.name] = t.value; save(st); progress();
+}, false);
+document.getElementById("stuName").addEventListener("input", function(){ var st = load(); st.__name = this.value; save(st); });
+
+function estimateLevel(total, a2, b1, b2){
+  if (total >= 26 && b2 >= 7) return "B2";
+  if (total >= 22 || (b1 >= 8 && b2 >= 6)) return "B1+";
+  if (total >= 17 && b1 >= 5) return "B1";
+  if (total >= 13 || (a2 >= 8 && b1 >= 3)) return "A2+";
+  if (total >= 9) return "A2";
+  return "A1";
+}
+
+function submit(){
+  var name = (document.getElementById("stuName").value || "").trim(), warn = document.getElementById("warnMsg");
+  if (name.length < 3) { warn.textContent = "Écrivez d'abord votre nom et prénom en haut de la page."; document.getElementById("stuName").focus(); window.scrollTo({top:0, behavior:"smooth"}); return; }
+  var missing = [];
+  for (var i = 1; i <= Q.length; i++) { var box = document.getElementById("q" + i); box.classList.remove("missing"); if (!document.querySelector('input[name="q' + i + '"]:checked')) missing.push(i); }
+  if (missing.length && !LAST) {
+    for (var m = 0; m < missing.length; m++) document.getElementById("q" + missing[m]).classList.add("missing");
+    if (!confirm(missing.length + " question(s) sans réponse (" + missing.join(", ") + "). Terminer quand même ? Une question vide compte 0.")) { document.getElementById("q" + missing[0]).scrollIntoView({behavior:"smooth", block:"center"}); return; }
+  }
+  warn.textContent = "";
+  var items = [], score = 0, parts = {A2:0, B1:0, B2:0}, max = {A2:0, B1:0, B2:0};
+  for (var k = 0; k < Q.length; k++) {
+    var q = Q[k], sel = document.querySelector('input[name="q' + q.n + '"]:checked'), given = sel ? sel.value : "", ok = 0, txt = "(blanc)";
+    for (var o = 0; o < q.opts.length; o++) if (q.opts[o].L === given) { txt = given + " — " + q.opts[o].t; if (q.opts[o].ok) ok = 1; }
+    score += ok; parts[q.part] += ok; max[q.part]++;
+    items.push({id: "q" + (q.n < 10 ? "0" + q.n : q.n), theme: q.theme, ok: ok, given: txt});   // compact : section = partie lue sur le n°, thème détaillé = build_qcm.TOPICS
+  }
+  var out20 = Math.round(score * 20 / 30 * 2) / 2, level = estimateLevel(score, parts.A2, parts.B1, parts.B2);
+  LAST = {test: TEST_NAME, name: name, cls: CLASS_NAME, date: new Date().toLocaleDateString("fr-FR"), submitted: new Date().toISOString(),
+          score: score, total: Q.length, out20: out20, level: level,
+          sections: [{name:"A2", sc:parts.A2, max:max.A2}, {name:"B1", sc:parts.B1, max:max.B1}, {name:"B2", sc:parts.B2, max:max.B2}], items: items};
+  var code = "GTEST1::" + btoa(unescape(encodeURIComponent(JSON.stringify(LAST))));
+  document.getElementById("exportCode").value = code;
+  var letters = "", chk = 0;
+  for (var c = 0; c < Q.length; c++) { var s2 = document.querySelector('input[name="q' + Q[c].n + '"]:checked'); var L2 = s2 ? s2.value : "-"; letters += L2; chk += (c + 1) * (L2 === "-" ? 0 : (L2.charCodeAt(0) - 64)); }
+  var slugName = name.normalize ? name.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : name;
+  slugName = slugName.replace(/[^A-Za-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+  var shortCode = SHORT_PREFIX + "-" + slugName + "-" + letters + "-" + ("0" + (chk % 97)).slice(-2);
+  document.getElementById("shortCode").value = shortCode;
+  document.getElementById("rNote").innerHTML = String(out20).replace(".", ",") + " <small>/ 20</small>";
+  document.getElementById("rName").textContent = name + " · " + score + " bonne(s) réponse(s) sur 30";
+  document.getElementById("rLevel").textContent = "Niveau estimé " + level;
+  document.getElementById("rSubs").innerHTML = "<span>A2 <b>" + parts.A2 + "/" + max.A2 + "</b></span><span>B1 <b>" + parts.B1 + "/" + max.B1 + "</b></span><span>B2 <b>" + parts.B2 + "/" + max.B2 + "</b></span>";
+  var subject = "QCM positionnement ELEC 1 CL2 — " + name;
+  var body = "Bonjour,\n\nVoici mon résultat du QCM de positionnement : " + String(out20).replace(".", ",") + "/20, niveau " + level + ".\n\nMon code : " + shortCode + "\n\n" + name;
+  document.getElementById("mailBtn").setAttribute("href", "mailto:" + TEACHER + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body));
+  document.body.classList.add("done");
+  var ins = document.querySelectorAll('.q input'); for (var d = 0; d < ins.length; d++) ins[d].disabled = true;
+  var sb = document.getElementById("submitBtn"); sb.disabled = true; sb.textContent = "Terminé — code généré ci-dessous";
+  var r = document.getElementById("result"); r.classList.add("show"); r.scrollIntoView({behavior:"smooth", block:"start"});
+  try { localStorage.removeItem(STORE); } catch(e) {}
+}
+
+function copyCode(){
+  var ta = document.getElementById("shortCode"), btn = document.getElementById("copyBtn"), done = false;
+  if (!ta.value) return;
+  ta.focus(); ta.select(); ta.setSelectionRange(0, 99999);
+  try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(ta.value); done = true; } else { done = document.execCommand("copy"); } }
+  catch(e) { try { done = document.execCommand("copy"); } catch(e2) {} }
+  btn.textContent = done ? "Code copié ✓" : "Sélectionnez le code ci-dessous et copiez-le";
+  setTimeout(function(){ btn.textContent = "Copier mon code"; }, 3000);
+}
+
+document.addEventListener("click", function(e){
+  var t = e.target, b = (t && t.closest) ? t.closest("[data-act]") : null; if (!b) return;
+  var act = b.getAttribute("data-act");
+  if (act === "submit") { e.preventDefault(); submit(); }
+  else if (act === "copy") { e.preventDefault(); copyCode(); }
+  else if (act === "mail") { if (!LAST) { e.preventDefault(); } /* sinon : laisser le mailto s'ouvrir */ }
+}, false);
+
+build();
+</script>
+</body>
+</html>
