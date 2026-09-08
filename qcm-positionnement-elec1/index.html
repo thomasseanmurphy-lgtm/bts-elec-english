@@ -76,7 +76,8 @@
 
   <div class="actions">
     <div class="progress" id="prog">0 / 30 réponses</div>
-    <button class="btn btn-main" id="submitBtn" data-act="submit">Terminer et voir mon résultat</button>
+    <button class="btn btn-main" id="submitBtn" data-act="submit">Terminer et envoyer mon résultat</button>
+    <div class="note" style="text-align:center;margin-top:6px">Votre application Mail s'ouvrira avec le résultat déjà écrit : il ne restera qu'à appuyer sur Envoyer.</div>
     <div class="warn" id="warnMsg"></div>
   </div>
 
@@ -86,7 +87,7 @@
     <div id="rName" class="note"></div>
     <div class="subs" id="rSubs"></div>
     <p class="note">Ce résultat est une photographie de rentrée. La correction détaillée vous sera envoyée dans votre bilan individuel.</p>
-    <p class="note"><b>Dernière étape : envoyez votre résultat au professeur.</b> Le bouton ouvre votre application Mail avec votre code déjà écrit — il suffit d'appuyer sur Envoyer. Si rien ne s'ouvre, copiez le code ci-dessous et collez-le dans un email à <span id="mailShow"></span>.</p>
+    <p class="note" id="sendNote"><b>Votre application Mail devrait s'être ouverte avec votre code : appuyez sur Envoyer.</b> Si rien ne s'est ouvert, utilisez le bouton vert ci-dessous, ou copiez le code et collez-le dans un email à <span id="mailShow"></span>. <b>Tant que l'email n'est pas envoyé, votre résultat n'est pas transmis.</b></p>
     <a class="btn btn-mail" id="mailBtn" href="#" data-act="mail">Envoyer mon résultat par email</a>
     <div class="note" style="margin-top:12px"><b>Votre code</b> (à copier si le bouton ne marche pas) :</div>
     <textarea id="shortCode" readonly style="min-height:56px;font-size:14px;color:#2a2a2a"></textarea>
@@ -132,6 +133,7 @@ function build(){
     document.getElementById("nameNote").textContent = "Votre nom est déjà inscrit.";
   }
   progress();
+  if (st.__done) restoreDone(st.__done);
 }
 
 function answered(){ var n = 0; for (var i = 1; i <= Q.length; i++) if (document.querySelector('input[name="q' + i + '"]:checked')) n++; return n; }
@@ -188,11 +190,29 @@ function submit(){
   var subject = "QCM positionnement ELEC 1 — " + name;
   var body = "Bonjour,\n\nVoici mon résultat du QCM de positionnement : " + String(out20).replace(".", ",") + "/20, niveau " + level + ".\n\nMon code : " + shortCode + "\n\n" + name;
   document.getElementById("mailBtn").setAttribute("href", "mailto:" + TEACHER + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body));
+  var mailHref = document.getElementById("mailBtn").getAttribute("href");
+  showResult();
+  try { var st2 = load(); st2.__done = {name: name, out20: out20, score: score, parts: parts, max: max, shortCode: shortCode, code: code, mailHref: mailHref}; save(st2); } catch(e) {}
+  setTimeout(function(){ try { window.location.href = mailHref; } catch(e) {} }, 700);   // une pierre deux coups : Mail s'ouvre avec le code
+}
+
+function showResult(){
   document.body.classList.add("done");
   var ins = document.querySelectorAll('.q input'); for (var d = 0; d < ins.length; d++) ins[d].disabled = true;
-  var sb = document.getElementById("submitBtn"); sb.disabled = true; sb.textContent = "Terminé — code généré ci-dessous";
+  var sb = document.getElementById("submitBtn"); sb.disabled = true; sb.textContent = "Terminé — vérifiez que l'email est parti";
   var r = document.getElementById("result"); r.classList.add("show"); r.scrollIntoView({behavior:"smooth", block:"start"});
-  try { localStorage.removeItem(STORE); } catch(e) {}
+}
+
+function restoreDone(d){
+  LAST = true;
+  document.getElementById("stuName").value = d.name; document.getElementById("stuName").readOnly = true;
+  document.getElementById("exportCode").value = d.code; document.getElementById("shortCode").value = d.shortCode;
+  document.getElementById("rNote").innerHTML = String(d.out20).replace(".", ",") + " <small>/ 20</small>";
+  document.getElementById("rName").textContent = d.name + " · " + d.score + " bonne(s) réponse(s) sur 30";
+  document.getElementById("rSubs").innerHTML = "<span>A2 <b>" + d.parts.A2 + "/" + d.max.A2 + "</b></span><span>B1 <b>" + d.parts.B1 + "/" + d.max.B1 + "</b></span><span>B2 <b>" + d.parts.B2 + "/" + d.max.B2 + "</b></span>";
+  document.getElementById("mailBtn").setAttribute("href", d.mailHref);
+  document.getElementById("sendNote").innerHTML = "<b>Vous avez déjà terminé ce QCM.</b> Si votre email n'est pas encore parti, appuyez sur le bouton vert (votre application Mail s'ouvre avec le code), ou copiez le code et envoyez-le à " + TEACHER + ".";
+  showResult();
 }
 
 function copyCode(){
